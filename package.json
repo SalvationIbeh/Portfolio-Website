@@ -1,0 +1,27 @@
+{
+    "name": "portfolio-website",
+    "version": "1.0.0",
+    "description": "My portfolio website",
+    "main": "index.js",
+    "scripts": {
+      "build": "npm run build-css && npm run build-js",
+      "build-css": "postcss src/css/*.css -o dist/css/styles.css",
+      "build-js": "babel src/js --out-dir dist/js",
+      "lint": "eslint . && stylelint '**/*.css'",
+      "test": "npm run lint && npm run test-html && npm run test-css && npm run test-js",
+      "test-html": "htmlhint src/*.html",
+      "test-css": "stylelint '**/*.css'",
+      "test-js": "eslint '**/*.js'"
+    },
+    "author": "Salvation Ibeh",
+    "license": "MIT",
+    "devDependencies": {
+      "eslint": "^7.32.0",
+      "stylelint": "^13.13.1",
+      "htmlhint": "^0.14.2",
+      "postcss-cli": "^8.3.1",
+      "babel-cli": "^6.26.0",
+      "babel-preset-env": "^1.7.0"
+    }
+  }
+  
