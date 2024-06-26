@@ -16,6 +16,7 @@
   "author": "Salvation Ibeh",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/compat": "^1.1.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^9.5.0",
