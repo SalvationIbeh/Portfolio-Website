@@ -10,17 +10,17 @@
     "lint": "eslint . && stylelint '**/*.css'",
     "test": "npm run lint && npm run test-html && npm run test-css && npm run test-js",
     "test-html": "htmlhint *.html",
-    "test-css": "stylelint '**/*.css'",
-    "test-js": "eslint '**/*.js'"
+    "test-css": "stylelint '**/*.css' --fix",
+    "test-js": "eslint **/*.js --fix"
   },
   "author": "Salvation Ibeh",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "stylelint": "^13.13.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^9.5.0",
     "htmlhint": "^0.14.2",
     "postcss-cli": "^8.3.1",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "stylelint": "^13.13.1"
   }
 }

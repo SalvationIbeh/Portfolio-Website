@@ -1,6 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #DDDDDD, #FFFFFF);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #DDD, #FFF);
     color: #333;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ header {
     background: #008080;
     color: white;
     padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,8 +20,8 @@ header {
 }
 
 header.scrolled {
-    background: rgba(0, 128, 128, 0.9);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: rgb(0 128 128 / 90%);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
 }
 
 .navbar-nav .nav-link.active {
@@ -85,13 +85,13 @@ nav a.nav-link:hover::after {
 }
 
 main {
-    padding: 100px 0;
+    padding: 130px 0;
 }
 
 h1, h2 {
     text-align: center;
-    background: linear-gradient(to right, #008080, #00cccc);
-    -webkit-background-clip: text;
+    background: linear-gradient(to right, #008080, #0cc);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textAnimation 3s infinite;
 }
@@ -110,6 +110,7 @@ h2 {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 100% 50%;
     }
@@ -120,7 +121,7 @@ h2 {
     margin-bottom: 40px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
     transition: transform 0.3s ease-in-out, background 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -129,21 +130,21 @@ h2 {
 .project:hover {
     transform: translateY(-10px) rotate(1deg);
     background: #f0f0f0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
 }
 
-.project:after {
+.project::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: -100%;
-    background: rgba(0, 128, 128, 0.1);
+    background: rgb(0 128 128 / 10%);
     transition: all 0.3s ease;
 }
 
-.project:hover:after {
+.project:hover::after {
     left: 0;
 }
 
@@ -154,7 +155,7 @@ h2 {
 }
 
 .project:hover h3 {
-    color: #00cccc;
+    color: #0cc;
 }
 
 footer {
@@ -180,18 +181,18 @@ footer a {
     padding-bottom: 10px;
 }
 
-.section-title:after {
+.section-title::after {
     content: '';
     width: 50%;
     height: 3px;
-    background: #00cccc;
+    background: #0cc;
     position: absolute;
     bottom: 0;
     left: 0;
     transition: width 0.3s ease-in-out;
 }
 
-.section-title:hover:after {
+.section-title:hover::after {
     width: 100%;
 }
 
@@ -200,6 +201,7 @@ footer a {
         opacity: 0;
         transform: translateY(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);

@@ -1,16 +1,17 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #DDDDDD, #FFFFFF);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #DDD, #FFF);
     color: #333;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
 header {
     background: #008080;
     color: white;
     padding: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
     position: fixed;
     width: 100%;
     top: 0;
@@ -19,8 +20,8 @@ header {
 }
 
 header.scrolled {
-    background: rgba(0, 128, 128, 0.9);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: rgb(0 128 128 / 90%);
+    box-shadow: 0 4px 20px rgb(0 0 0 / 20%);
 }
 
 .navbar-nav .nav-link.active {
@@ -80,7 +81,7 @@ nav a.nav-link:hover::after {
 
 /* Updated hero section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?coding,technology');
+    background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('https://source.unsplash.com/1600x900/?coding,technology');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -142,15 +143,18 @@ section h2::after {
 }
 
 @keyframes bounce {
-    from, 20%, 53%, 80%, to {
+    0%, 20%, 53%, 80%, 100% {
         transform: translateY(0);
     }
+
     40%, 43% {
         transform: translateY(-30px);
     }
+
     70% {
         transform: translateY(-15px);
     }
+
     90% {
         transform: translateY(-4px);
     }
@@ -161,7 +165,7 @@ section h2::after {
 }
 
 button.carousel-control-prev, button.carousel-control-next {
-    background: rgba(0, 128, 128, 0.7);
+    background: rgb(0 128 128 / 70%);
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -183,7 +187,7 @@ button.carousel-control-prev:hover, button.carousel-control-next:hover {
 
 /* Advanced styles */
 body {
-    background: linear-gradient(to right, #FFFFFF, #DDDDDD);
+    background: linear-gradient(to right, #FFF, #DDD);
     overflow-x: hidden; 
 }
 
