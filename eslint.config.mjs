@@ -1,8 +1,8 @@
+// eslint.config.mjs
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import _import from 'eslint-plugin-import';
 import node from 'eslint-plugin-node';
 import promise from 'eslint-plugin-promise';
-import standard from 'eslint-plugin-standard';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -23,15 +23,13 @@ export default [
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:node/recommended',
-    'plugin:promise/recommended',
-    'standard'
+    'plugin:promise/recommended'
   )),
   {
     plugins: {
       import: fixupPluginRules(_import),
       node: fixupPluginRules(node),
-      promise: fixupPluginRules(promise),
-      standard
+      promise: fixupPluginRules(promise)
     },
 
     languageOptions: {
@@ -39,7 +37,7 @@ export default [
         ...globals.browser
       },
 
-      ecmaVersion: 12,
+      ecmaVersion: 2020,
       sourceType: 'module'
     },
 
